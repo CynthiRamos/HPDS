@@ -12,7 +12,7 @@ public class IncreaseUnaryOperatorNodeTests {
         ConstantNode number = new ConstantNode(0);
         IncreaseUnaryOperatorNode increase = 
                 new IncreaseUnaryOperatorNode(number);
-        Assert.assertEquals(1, increase, 0.0);
+     
        
     }
     
