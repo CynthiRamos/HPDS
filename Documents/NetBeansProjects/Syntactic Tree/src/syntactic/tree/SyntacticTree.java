@@ -1,8 +1,5 @@
 package syntactic.tree;
-/**
- *
- * @author Cynthi
- */
+
 public class SyntacticTree {
 
     /**

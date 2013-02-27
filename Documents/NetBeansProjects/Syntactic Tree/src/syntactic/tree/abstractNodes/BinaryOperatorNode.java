@@ -1,5 +1,7 @@
 
-package syntactic.tree;
+package syntactic.tree.abstractNodes;
+
+import syntactic.tree.Node;
 
 public abstract class BinaryOperatorNode extends OperationalNode {
     private Node left, right;

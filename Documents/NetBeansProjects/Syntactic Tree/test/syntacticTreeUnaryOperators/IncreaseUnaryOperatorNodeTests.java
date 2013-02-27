@@ -12,8 +12,21 @@ public class IncreaseUnaryOperatorNodeTests {
         ConstantNode number = new ConstantNode(0);
         IncreaseUnaryOperatorNode increase = 
                 new IncreaseUnaryOperatorNode(number);
-     
-       
+        Assert.assertEquals(1, increase.evaluate(), 0);  
+    }
+    @Test
+    public void IncreaseUnaryOperatorNodeTests_number() {
+        ConstantNode number = new ConstantNode(15);
+        IncreaseUnaryOperatorNode increase = 
+                new IncreaseUnaryOperatorNode(number);
+        Assert.assertEquals(16, increase.evaluate(), 0);  
+    }
+    @Test
+    public void IncreaseUnaryOperatorNodeTests_negativenumber() {
+        ConstantNode number = new ConstantNode(-15);
+        IncreaseUnaryOperatorNode increase = 
+                new IncreaseUnaryOperatorNode(number);
+        Assert.assertEquals(-14, increase.evaluate(), 0);  
     }
     
   }

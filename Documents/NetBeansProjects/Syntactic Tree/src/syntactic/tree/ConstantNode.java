@@ -1,7 +1,4 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package syntactic.tree;
 
 public class ConstantNode extends Node {
@@ -16,5 +13,5 @@ public class ConstantNode extends Node {
     public double evaluate() {
        return this.operating;
     }
-
+    
 }
