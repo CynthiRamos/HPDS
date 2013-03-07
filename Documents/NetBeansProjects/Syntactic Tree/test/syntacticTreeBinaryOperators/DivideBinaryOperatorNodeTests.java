@@ -4,7 +4,6 @@ package syntacticTreeBinaryOperators;
 import junit.framework.Assert;
 import org.junit.Test;
 import syntactic.tree.BinaryOperatorsNode.DivideBinaryOperatorNode;
-import syntactic.tree.BinaryOperatorsNode.SubtractBinaryOperatorNode;
 import syntactic.tree.ConstantNode;
 
 
@@ -31,7 +30,13 @@ public class DivideBinaryOperatorNodeTests {
         ConstantNode dividendo = new ConstantNode(10);
         ConstantNode divisor = new ConstantNode(0);
         DivideBinaryOperatorNode div = new DivideBinaryOperatorNode(dividendo, divisor);
-       // Assert.assertEquals( "Infinity", div.evaluate(), 0.0);
+        try{
+            double quotient = div.evaluate();
+            Assert.fail("indeterminate, divition by zero");
+        }catch(RuntimeException e){
+            Assert.assertTrue(true);
+        }
+       
     }
     
 }

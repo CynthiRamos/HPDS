@@ -10,9 +10,12 @@ public class DivideBinaryOperatorNode extends BinaryOperatorNode{
         super(left, right);
     }
 
-    
     @Override
     public double evaluate() {
+        
+        if (this.getRight().evaluate() == 0.0) {
+            throw new RuntimeException("indeterminate");
+        }    
         return (this.getLeft().evaluate())/(this.getRight().evaluate());
     }
     
