@@ -1,9 +1,10 @@
 
-package syntactic.tree.abstractNodes;
+package Operators;
 
 import syntactic.tree.Node;
+import syntactic.tree.Type;
 
-public abstract class UnaryOperatorNode extends OperationalNode  {
+public abstract class UnaryOperatorNode extends Operation  {
     private Node center;
 
     public UnaryOperatorNode(Node center) {
@@ -17,8 +18,8 @@ public abstract class UnaryOperatorNode extends OperationalNode  {
     public void setCenter(Node center) {
         this.center = center;
     }
-    
+        
     @Override
-    public abstract double evaluate();
+    public abstract Type evaluate();
     
 }

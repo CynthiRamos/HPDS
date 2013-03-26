@@ -1,10 +1,18 @@
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package Operators;
 
-package syntactic.tree;
-
-
-public class Operator {
+/**
+ *
+ * @author Cynthi
+ */
+public class Todo {
     
-    /*TODO siguiente iteracion de la prácticas
+}
+ 
+/*TODO siguiente iteracion de la prácticas
     * public class operator
     * {
     * private string symbol
@@ -30,6 +38,4 @@ public class Operator {
     * + -> operator
     *      leftchild
     *      rightchild
-    */ 
-    
-}
+    */
