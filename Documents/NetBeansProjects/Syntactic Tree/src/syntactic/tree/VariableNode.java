@@ -15,6 +15,6 @@ public class VariableNode extends Node{
         
     @Override
     public Type evaluate() {
-        return this.evaluate();
+        return this.value;
     }   
 }
