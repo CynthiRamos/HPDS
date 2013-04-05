@@ -2,12 +2,6 @@
 package Operators;
 
 import Calculator.Calculator;
-import Types.DoubleType;
-import Types.IntegerType;
-import java.lang.reflect.InvocationTargetException;
-import java.lang.reflect.Method;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import syntactic.tree.Node;
 import syntactic.tree.Type;
 
