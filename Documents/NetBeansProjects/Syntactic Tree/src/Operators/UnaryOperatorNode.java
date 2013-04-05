@@ -22,4 +22,15 @@ public abstract class UnaryOperatorNode extends Operation  {
     @Override
     public abstract Type evaluate();
     
+    public Object sin(){
+    
+        throw new UnsupportedOperationException("Not yet implemented");
+   
+    }
+    public Object cos(){
+    
+        throw new UnsupportedOperationException("Not yet implemented");
+   
+    }
+    
 }
