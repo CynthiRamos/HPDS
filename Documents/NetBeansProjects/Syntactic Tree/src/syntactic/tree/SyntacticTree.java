@@ -15,6 +15,4 @@ public class SyntacticTree {
     public void setNodeRoot(Node nodeRoot) {
         this.nodeRoot = nodeRoot;
     }
-
-    
 }
