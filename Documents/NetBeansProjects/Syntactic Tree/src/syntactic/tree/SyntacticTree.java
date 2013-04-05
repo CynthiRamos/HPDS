@@ -2,10 +2,19 @@ package syntactic.tree;
 
 public class SyntacticTree {
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        // TODO code application logic here
+    private Node nodeRoot;
+
+    public SyntacticTree(Node nodeRoot) {
+        this.nodeRoot = nodeRoot;
     }
+
+    public Node getNodeRoot() {
+        return nodeRoot;
+    }
+
+    public void setNodeRoot(Node nodeRoot) {
+        this.nodeRoot = nodeRoot;
+    }
+
+    
 }
