@@ -34,34 +34,7 @@ public class BinaryOperatorNode extends Operation {
         Type tLeft = getLeft().evaluate();
         Type tRight = getRight().evaluate(); 
         Calculator calculator = Calculation.typesDescriptorCalculator(tLeft, tRight);
-        return Calculate( calculator, tLeft, tRight);
-    }
+        return Calculation.Calculate( calculator, tLeft, tRight, operator);
     
-    
-    
-    private Type Calculate(Calculator calculator, Type left, Type right){
-        try{
-            if(calculator == null){
-                return null;
-            }
-            Method method = calculator.getClass().getMethod(operator.getName(), left.getValue().getClass(), right.getValue().getClass());
-            return typesDescriptor(method.invoke(calculator, left.getValue(), right.getValue()));
-        } catch (IllegalAccessException | IllegalArgumentException | InvocationTargetException ex) {
-            Logger.getLogger(BinaryOperatorNode.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (NoSuchMethodException ex) {
-            return null;
-        }
-        return null;    
-    }
-    
-     private Type typesDescriptor(Object object) {
-        if (object instanceof Double) {
-            return new DoubleType((double) object);
-        }
-        if (object instanceof Integer) {
-            return new IntegerType((int) object);
-        }
-        return null;
-
-    }
+    } 
 }
