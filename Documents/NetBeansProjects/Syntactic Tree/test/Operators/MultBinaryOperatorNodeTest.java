@@ -1,4 +1,3 @@
-
 package Operators;
 
 import Types.DoubleType;
@@ -8,9 +7,8 @@ import org.junit.Test;
 import syntactic.tree.ConstantNode;
 import syntactic.tree.Node;
 
-
 public class MultBinaryOperatorNodeTest {
-    
+
     @Test
     public void MultBinaryOperatorNodeTest_int_int() {
         Node binaryNode;
@@ -19,7 +17,7 @@ public class MultBinaryOperatorNodeTest {
         assertEquals(IntegerType.class, binaryNode.evaluate().getClass());
         assertEquals(0, (int) binaryNode.evaluate().getValue(), 0.0);
     }
-    
+
     @Test
     public void MultBinaryOperatorTest_int_double() {
         Node binaryNode;
@@ -28,7 +26,7 @@ public class MultBinaryOperatorNodeTest {
         assertEquals(DoubleType.class, binaryNode.evaluate().getClass());
         assertEquals(612276.0, (double) binaryNode.evaluate().getValue(), 0.0);
     }
-    
+
     @Test
     public void MultBinaryOperatorTest_double_int() {
         Node binaryNode;
@@ -37,7 +35,7 @@ public class MultBinaryOperatorNodeTest {
         assertEquals(DoubleType.class, binaryNode.evaluate().getClass());
         assertEquals(-612276.0, (double) binaryNode.evaluate().getValue(), 0.0);
     }
-    
+
     @Test
     public void MultBinaryOperatorTest_double_double() {
         Node binaryNode;
@@ -46,5 +44,4 @@ public class MultBinaryOperatorNodeTest {
         assertEquals(DoubleType.class, binaryNode.evaluate().getClass());
         assertEquals(0.0, (double) binaryNode.evaluate().getValue(), 0.0);
     }
-    
 }

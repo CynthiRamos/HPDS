@@ -1,7 +1,6 @@
-
 package syntactic.tree;
 
-public class VariableNode extends Node{
+public class VariableNode extends Node {
 
     private final Type value;
 
@@ -12,9 +11,9 @@ public class VariableNode extends Node{
     public Type getValue() {
         return value;
     }
-        
+
     @Override
     public Type evaluate() {
         return this.value;
-    }   
+    }
 }

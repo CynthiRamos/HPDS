@@ -1,6 +1,4 @@
-
 package syntactic.tree;
-
 
 public abstract class Node {
 

@@ -1,4 +1,3 @@
-
 package Operators;
 
 import Calculator.Calculator;
@@ -13,9 +12,9 @@ import syntactic.tree.Type;
 
 public class Calculation {
 
-   public static Calculator typesDescriptorCalculator(Type left, Type right){
-        
-        if(left == null || right == null){
+    public static Calculator typesDescriptorCalculator(Type left, Type right) {
+
+        if (left == null || right == null) {
             return null;
         }
         if ((left.getValue() instanceof Integer) && (right.getValue() instanceof Integer)) {
@@ -29,27 +28,27 @@ public class Calculation {
         }
         if ((left.getValue() instanceof Double) && (right.getValue() instanceof Double)) {
             return new TypesCalculator();
-        }       
+        }
         return null;
     }
-   
-    public static Type Calculate(Calculator calculator, Type left, Type right, Operator operator){
-        try{
-            if(calculator == null){
+
+    public static Type Calculate(Calculator calculator, Type left, Type right, Operator operator) {
+        try {
+            if (calculator == null) {
                 return null;
             }
             Method method = calculator.getClass().getMethod(operator.getName(), left.getValue().getClass(), right.getValue().getClass());
             return typesDescriptor(method.invoke(calculator, left.getValue(), right.getValue()));
-            
-            } catch (IllegalAccessException | IllegalArgumentException | InvocationTargetException ex) {
+
+        } catch (IllegalAccessException | IllegalArgumentException | InvocationTargetException ex) {
             Logger.getLogger(BinaryOperatorNode.class.getName()).log(Level.SEVERE, null, ex);
         } catch (NoSuchMethodException ex) {
             return null;
         }
-        return null;    
+        return null;
     }
-    
-     private  static Type typesDescriptor(Object object) {
+
+    private static Type typesDescriptor(Object object) {
         if (object instanceof Double) {
             return new DoubleType((double) object);
         }
@@ -59,6 +58,4 @@ public class Calculation {
         return null;
 
     }
-
-
 }

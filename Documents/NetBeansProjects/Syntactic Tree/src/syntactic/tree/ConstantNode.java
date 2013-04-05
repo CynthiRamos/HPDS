@@ -1,8 +1,7 @@
-
 package syntactic.tree;
 
 public class ConstantNode extends Node {
-    
+
     private final Type value;
 
     public ConstantNode(Type value) {

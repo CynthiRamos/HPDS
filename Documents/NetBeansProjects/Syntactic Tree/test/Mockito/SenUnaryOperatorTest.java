@@ -1,11 +1,10 @@
 package Mockito;
 
-
-
 import Operators.UnaryOperatorNode;
 import static org.junit.Assert.*;
 import org.junit.Test;
 import static org.mockito.Mockito.*;
+
 public class SenUnaryOperatorTest {
 
     @Test

@@ -1,4 +1,3 @@
-
 package Operators;
 
 import Types.DoubleType;
@@ -8,9 +7,8 @@ import org.junit.Test;
 import syntactic.tree.ConstantNode;
 import syntactic.tree.Node;
 
-
 public class divBinaryOperatorTest {
-    
+
     @Test
     public void AddBinaryOperatorTest_int_int() {
         Node binaryNode;
@@ -19,7 +17,7 @@ public class divBinaryOperatorTest {
         assertEquals(DoubleType.class, binaryNode.evaluate().getClass());
         assertEquals(7.0, (double) binaryNode.evaluate().getValue(), 0.0);
     }
-    
+
     @Test
     public void AddBinaryOperatorTest_int_double() {
         Node binaryNode;
@@ -28,7 +26,7 @@ public class divBinaryOperatorTest {
         assertEquals(DoubleType.class, binaryNode.evaluate().getClass());
         assertEquals(-22.0, (double) binaryNode.evaluate().getValue(), 0.0);
     }
-    
+
     @Test
     public void AddBinaryOperatorTest_double_int() {
         Node binaryNode;
@@ -37,7 +35,7 @@ public class divBinaryOperatorTest {
         assertEquals(DoubleType.class, binaryNode.evaluate().getClass());
         assertEquals(5.0, (double) binaryNode.evaluate().getValue(), 0.0);
     }
-    
+
     @Test
     public void AddBinaryOperatorTest_double_double() {
         Node binaryNode;

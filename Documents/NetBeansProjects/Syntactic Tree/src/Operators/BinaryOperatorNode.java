@@ -1,4 +1,3 @@
-
 package Operators;
 
 import Calculator.Calculator;
@@ -6,6 +5,7 @@ import syntactic.tree.Node;
 import syntactic.tree.Type;
 
 public class BinaryOperatorNode extends Operation {
+
     private final Node left, right;
     private final Operator operator;
 
@@ -24,11 +24,11 @@ public class BinaryOperatorNode extends Operation {
     }
 
     @Override
-    public Type evaluate(){
+    public Type evaluate() {
         Type tLeft = getLeft().evaluate();
-        Type tRight = getRight().evaluate(); 
+        Type tRight = getRight().evaluate();
         Calculator calculator = Calculation.typesDescriptorCalculator(tLeft, tRight);
-        return Calculation.Calculate( calculator, tLeft, tRight, operator);
-    
-    } 
+        return Calculation.Calculate(calculator, tLeft, tRight, operator);
+
+    }
 }
