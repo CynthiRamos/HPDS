@@ -2,7 +2,6 @@
 package Operators;
 
 import Calculator.Calculator;
-import Calculator.TypesCalculator;
 import Types.DoubleType;
 import Types.IntegerType;
 import java.lang.reflect.InvocationTargetException;
@@ -34,28 +33,11 @@ public class BinaryOperatorNode extends Operation {
     public Type evaluate(){
         Type tLeft = getLeft().evaluate();
         Type tRight = getRight().evaluate(); 
-        return Calculate( typesDescriptorCalculator(tLeft, tRight), tLeft, tRight);
+        Calculator calculator = Calculation.typesDescriptorCalculator(tLeft, tRight);
+        return Calculate( calculator, tLeft, tRight);
     }
     
-    private Calculator typesDescriptorCalculator(Type left, Type right){
-        
-        if(left == null || right == null){
-            return null;
-        }
-        if ((left.getValue() instanceof Integer) && (right.getValue() instanceof Integer)) {
-            return new TypesCalculator();
-        }
-        if ((left.getValue() instanceof Integer) && (right.getValue() instanceof Double)) {
-            return new TypesCalculator();
-        }
-        if ((left.getValue() instanceof Double) && (right.getValue() instanceof Integer)) {
-            return new TypesCalculator();
-        }
-        if ((left.getValue() instanceof Double) && (right.getValue() instanceof Double)) {
-            return new TypesCalculator();
-        }       
-        return null;
-    }
+    
     
     private Type Calculate(Calculator calculator, Type left, Type right){
         try{
